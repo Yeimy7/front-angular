@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    Editar Vehiculo
+  </div>
+  <div class="card-body">
+    <form ngNativeValidate [formGroup]="formularioVehiculo" (ngSubmit)="enviarDatos()">
+      <div class="mb-3">
+        <label for="" class="form-label">Marca:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="marca" id="" aria-describedby="helpId" placeholder="Ingresa la marca">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Modelo:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="modelo" id="" aria-describedby="helpId" placeholder="Ingresa el modelo">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Año:</label>
+        <input required type="number"
+          class="form-control" name="" formControlName="anio" id="" aria-describedby="helpId" placeholder="Ingresa el año">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Placa:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="placa" id="" aria-describedby="helpId" placeholder="Ingresa la placa">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Color:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="color" id="" aria-describedby="helpId" placeholder="Ingresa el color">
+      </div>
+      <div class="btn-group" role="group" aria-label="">
+        <button type="submit" class="btn btn-success">Editar</button>
+        <button type="button" routerLink="/cliente/{{ID}}/listar-vehiculo" class="btn btn-danger">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+</div>

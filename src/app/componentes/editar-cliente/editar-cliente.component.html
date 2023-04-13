@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-header">
+    Editar Cliente
+  </div>
+  <div class="card-body">
+    <form ngNativeValidate [formGroup]="formularioClientes" (ngSubmit)="enviarDatos()">
+      <div class="mb-3">
+        <label for="" class="form-label">Nombre:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Ingresa el nombre">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Apellido paterno:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="paterno" id="" aria-describedby="helpId" placeholder="Ingresa el apellido paterno">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Apellido paterno:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="materno" id="" aria-describedby="helpId" placeholder="Ingresa el apellido materno">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Tipo documento:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="tipoDoc" id="" aria-describedby="helpId" placeholder="Ingresa tipo de documento">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Documento de identidad:</label>
+        <input required type="text"
+          class="form-control" name="" formControlName="docIdentidad" id="" aria-describedby="helpId" placeholder="Ingresa el documento de identidad">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Fecha de nacimiento:</label>
+        <input type="date"
+          class="form-control" name="" formControlName="fecNacimiento" id="" aria-describedby="helpId">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Genero:</label>
+        <input type="text"
+          class="form-control" name="" formControlName="genero" id="" aria-describedby="helpId" placeholder="Ingresa el genero">
+      </div>
+      <div class="btn-group" role="group" aria-label="">
+        <button type="submit" class="btn btn-success">Editar</button>
+        <button type="button" routerLink="/listar-cliente" class="btn btn-danger">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+</div>

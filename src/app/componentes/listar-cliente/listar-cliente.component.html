@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header">
+    <a class="btn btn-success" routerLink="/agregar-cliente"> Agregar cliente</a>
+  </div>
+  <div class="card-body">
+    <h1>Lista de Clientes</h1>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <!-- <th scope="col">ID</th> -->
+            <th scope="col">Nombre</th>
+            <th scope="col">Paterno</th>
+            <th scope="col">Materno</th>
+            <th scope="col">Tipo doc</th>
+            <th scope="col">Doc de identidad</th>
+            <th scope="col">Fecha nac</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of Clientes?.results; let iControl = index">
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.paterno }}</td>
+            <td>{{ cliente.materno }}</td>
+            <td>{{ cliente.tipoDoc }}</td>
+            <td>{{ cliente.docIdentidad }}</td>
+            <td>{{ cliente.fecNacimiento }}</td>
+            <td>{{ cliente.genero }}</td>
+            <td>
+              <a class="btn btn-primary" routerLink="/editar-cliente/{{ cliente.id }}">Editar</a> |
+              <a  class="btn btn-danger" (click)="borrarCliente(cliente.id, iControl)" role="button">Borrar</a> |
+              <a  class="btn btn-success" routerLink="/cliente/{{ cliente.id }}/listar-vehiculo" role="button">Vehiculo</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
